@@ -2,7 +2,7 @@
 @section('content')
     <section class="content-header col-sm-offset-2" >
         <h1>
-            Add Survey
+            CreateNew Survey
         </h1>
     </section>
     <div class="content">

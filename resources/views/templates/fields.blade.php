@@ -20,6 +20,14 @@
     </div>
     @endif
 
+<!-- Supplier Id Field -->
+
+<div class="form-group supplier_list" id="supplier_list">
+    {!! Form::label('vendor_id', 'Suppliers:') !!}
+    {!! Form::select('vendor_id', $vendors, null,
+    ['class' => 'form-control select2']) !!}
+</div>
+
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Title:') !!}

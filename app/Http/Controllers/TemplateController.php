@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateTemplateRequest;
 use App\Models\Question;
 use App\Models\SurveyType;
 use App\Models\Template;
+use App\Models\Vendor;
 use App\Repositories\TemplateRepository;
 use App\User;
 use Flash;
@@ -45,7 +46,8 @@ class TemplateController extends AppBaseController
     public function create()
     {
         $survey_types = SurveyType::all();
-        return view('templates.create', compact('survey_types'));
+        $vendors = Vendor::get()->pluck('name', 'id');
+        return view('templates.create', ['survey_types' => $survey_types, 'vendors' => $vendors]);
     }
 
     /**
